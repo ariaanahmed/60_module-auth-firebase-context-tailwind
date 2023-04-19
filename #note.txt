@@ -1,0 +1,5 @@
+60-1 Module Introduction and Basic Project Setup
+
+install the tailwind 
+        + 
+daisy ui > npm i daisyui + plugins: [require("daisyui")],(tailwind.config.js)
