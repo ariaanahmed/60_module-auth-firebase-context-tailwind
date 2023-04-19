@@ -3,3 +3,5 @@
 install the tailwind 
         + 
 daisy ui > npm i daisyui + plugins: [require("daisyui")],(tailwind.config.js)
+
+60-2 Create Login and Registration Form using Daisy UI
