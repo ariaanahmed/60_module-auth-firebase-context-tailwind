@@ -5,3 +5,16 @@ install the tailwind
 daisy ui > npm i daisyui + plugins: [require("daisyui")],(tailwind.config.js)
 
 60-2 Create Login and Registration Form using Daisy UI
+
+60-3 Create User Context for shared authentication
+
+react.dev:
+1. create context (export)
+2. create provider
+3. set context value
+4. to access the value: useContext hook
+5. main.jsx set AuthProvider
+6. inside provide access children props and then use
+
+
+60-4 Access Context Value from anywhere inside the app
