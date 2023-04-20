@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProviders';
 
 const Login = () => {
+
+    const {singIn} = useContext(AuthContext)
 
     const hanldeLogin = (event) => {
         event.preventDefault();
@@ -10,6 +13,12 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password)
+        singIn(email, password).then((result) => {
+            const loggedInUser = result.user;
+            console.log(loggedInUser)
+        }).catch((error) => {
+            console.log(error)
+        })
     }
 
     return (

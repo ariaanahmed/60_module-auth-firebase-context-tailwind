@@ -18,3 +18,8 @@ react.dev:
 
 
 60-4 Access Context Value from anywhere inside the app
+
+60-5 Add Create user and Sign in user using context API
+
+1. break down the create user function
+2. auth provider will have auth and pass email and password from register
