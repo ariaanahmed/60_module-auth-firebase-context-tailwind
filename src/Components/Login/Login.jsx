@@ -1,21 +1,22 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
 
 const Login = () => {
 
-    const {singIn} = useContext(AuthContext)
+    const {signIn} = useContext(AuthContext);
 
-    const hanldeLogin = (event) => {
+    const handleLogIn = (event) => {
         event.preventDefault();
         const form = event.target;
-
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password)
-        singIn(email, password).then((result) => {
-            const loggedInUser = result.user;
-            console.log(loggedInUser)
+
+        signIn(email, password).then((result) => {
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            form.reset()
         }).catch((error) => {
             console.log(error)
         })
@@ -29,7 +30,7 @@ const Login = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 
-                    <form className="card-body" onSubmit={hanldeLogin}>
+                    <form className="card-body" onSubmit={handleLogIn}>
                         <div className="form-control">
                             <label className="label"> <span className="label-text">Email</span></label>
                             <input type="email" name='email' required placeholder="email" className="input input-bordered" />
