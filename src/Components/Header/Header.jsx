@@ -4,13 +4,15 @@ import { AuthContext } from '../Providers/AuthProviders';
 
 const Header = () => {
 
-    const {user, logOut} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
     const handleLogOut = () => {
         logOut().then(() => {}).catch((error) => {
             console.log(error)
         })
     }
+  
+    
     return (
         <div className="navbar bg-primary text-primary-content justify-between w-12/12 mx-auto px-5">
             <Link className="normal-case text-xl" to='/'>AuthMaster</Link>
@@ -24,12 +26,12 @@ const Header = () => {
                 <Link className="tooltip tooltip-bottom" data-tip="Register" to='/register'>Register</Link>
                 {
                     user ?
-                    <>
-                        <span>{user.email}</span>
-                        <button onClick={handleLogOut} className='btn btn-xs'>Log out</button>
-                    </>
-                    :
-                    <Link to="/login">Login</Link>
+                        <>
+                            <span>{user.email}</span>
+                            <button onClick={handleLogOut} className='btn btn-xs'>Log out</button>
+                        </>
+                        :
+                        <Link to="/login">Login</Link>
                 }
             </div>
         </div>
