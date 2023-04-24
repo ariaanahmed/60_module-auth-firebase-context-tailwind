@@ -29,3 +29,6 @@ react.dev:
 onAuthStateChanged
 
 Connecting to an external system (useEffect - observer) - react.dev
+
+
+60-7 Introduction to Private Route and navigate after login
